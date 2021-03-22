@@ -12,7 +12,7 @@ node {
      }
    }
    stage('docker build/push') {
-     docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
+     docker.withRegistry('https://index.docker.io/v1/', '455a51df-cd86-4acf-977c-24358292d07e') {
        def app = docker.build("osmanburucuibm/images:${commit_id}", '.').push()
      }
    }
